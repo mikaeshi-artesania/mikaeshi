@@ -27,6 +27,11 @@ url: "https://mikaeshi.com"
 future: true
 safe: true
 
+youtube_username:
+flickr_username: 
+instagram_username: mikaeshi_artesania
+facebook_username: mikaeshi
+
 # Build settings
 markdown: kramdown
 kramdown:
