@@ -1,4 +1,4 @@
 ---
 layout: home
 ---
-# mikaeshi
+![mikaeshi](/assets/logo.svg)
