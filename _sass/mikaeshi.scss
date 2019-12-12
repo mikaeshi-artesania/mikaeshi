@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+/************
+ * Color
+ ************/
+$color_00: #ffffff !default;
+$color_01: #000000 !default;
+$color_02: #E0BC75 !default;
+$color_03: #008000 !default;
+$color_04: #b0b0b0 !default;
+$color_05: #363636 !default;
+
+$color_tr: rgba(255, 255, 255, 0) !default;
+
+$brand-color: $color_02 !default;
+
+// No se si está bien. Esto es para mi Mesejo, para verlo todo muy claro mientras trabajo.
+// Además puedo reutilizarla así para arrancar mi web desde aquí y esas cosas. 
+
+$font_color_00: $color_00 !default;
+$font_color_01: $color_01 !default;
+$font_color_02: $color_02 !default;
+$font_color_03: $color_03 !default;
+$font_color_04: $color_04 !default;
+$font_color_05: $color_05 !default;
+
+$bg_color_00: $color_00 !default;
+$bg_color_01: $color_01 !default;
+$bg_color_02: $color_02 !default;
+$bg_color_03: $color_03 !default;
+$bg_color_04: $color_04 !default;
+$bg_color_05: $color_05 !default;
+
+$bg_color_nav: rgba(255, 255, 255, 0.85);
+$bg_color_footer:$bg_color_05 !default;
+
+$grey-color: #adadad !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark:  darken($grey-color, 25%) !default;
+
+@font-face {
+  font-family: "essonnes-display";
+  src: url("https://use.typekit.net/af/6a5fe5/00000000000000003b9ada64/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"), url("https://use.typekit.net/af/6a5fe5/00000000000000003b9ada64/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"), url("https://use.typekit.net/af/6a5fe5/00000000000000003b9ada64/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: auto;
+}
+@font-face {
+  font-family: "brandon-grotesque-ligth";
+  src: url("https://use.typekit.net/af/9f8c97/0000000000000000000132de/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff2"), url("https://use.typekit.net/af/9f8c97/0000000000000000000132de/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("woff"), url("https://use.typekit.net/af/9f8c97/0000000000000000000132de/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: auto;
+}
+@font-face {
+  font-family: "brandon-grotesque-medium";
+  src: url("https://use.typekit.net/af/d8f71f/0000000000000000000132e1/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"), url("https://use.typekit.net/af/d8f71f/0000000000000000000132e1/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff"), url("https://use.typekit.net/af/d8f71f/0000000000000000000132e1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: auto;
+}
+
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "essonnes-display","brandon-grotesque-ligth","brandon-grotesque-medium", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$font_01: "brandon-grotesque-ligth" !default; // h1, p
+$font_02: "brandon-grotesque-medium" !default; // botones
+$font_03: "essonnes-display" !default; // h2
+
+$base-font-size: 20px !default;
+$base-font-weight: 400 !default;
+$small-font-size: $base-font-size * 0.875 !default;
+$big-font-size: $base-font-size * 1.375 !default;
+
+$nav-font-size: $small-font-size;
+$footer-font-size: $small-font-size;
+
+$base-line-height: 1.5 !default;
+$spacing-unit: 30px !default;
+
+$table-text-align: left !default;
+
+/*******************
+ * Responsive layout
+ *******************/
+
+$content-width: auto !default;
+
+$on-small: 500px !default;
+$on-medium: 700px !default;
+$on-laptop: 1080px !default;
+$on-big: 1280px !default;
+
+/*******************
+ *  Otros
+ *******************/
+
+ // Radio de los botones
+ $radio_btn: 0px;
+
+// ****** //
+// MIXINS  
+// ****** //
+
+@mixin media-query($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+/**********************************
+Use media queries like this:
+
+  @include media-query($on-small) {
+    .wrapper {
+      padding-right: $spacing-unit / 2;
+      padding-left: $spacing-unit / 2;
+    }
+  }
+ ************************************/
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// *************** //
+// IMPORT PARTIALS
+// *************** //
+
+@import
+"mikaeshi/normalize",
+"mikaeshi/base",
+"mikaeshi/header",
+"mikaeshi/footer"
