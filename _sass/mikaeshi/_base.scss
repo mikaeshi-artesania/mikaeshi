@@ -8,5 +8,10 @@ p, ul {
 
 li {
   display: inline-block;
-  width: 30px;
+  width: 60px;
+  text-align: center;
+
+  svg {
+    width: 16px;
+  }
 }
